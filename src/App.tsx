@@ -32,6 +32,16 @@ import NotFound from "./pages/NotFound";
 
 // Auth & Onboarding
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage"));
+
+// Bundle H — Integrations
+const IntegrationsHubPage = lazy(() => import("./pages/integrations/IntegrationsHubPage"));
+const ConnectedAccountsPage = lazy(() => import("./pages/integrations/ConnectedAccountsPage"));
+const ExportCenterPage = lazy(() => import("./pages/integrations/ExportCenterPage"));
+const WebhookDashboardPage = lazy(() => import("./pages/integrations/WebhookDashboardPage"));
+const IntegrationActivityLogPage = lazy(() => import("./pages/integrations/IntegrationActivityLogPage"));
+const BulkImportWizardPage = lazy(() => import("./pages/integrations/BulkImportWizardPage"));
+const CalendarSyncPage = lazy(() => import("./pages/integrations/CalendarSyncPage"));
+const AdminEmailTemplatesPage = lazy(() => import("./pages/admin/AdminEmailTemplatesPage"));
 const OnboardingPage = lazy(() => import("./pages/OnboardingPage"));
 
 // Dashboard
@@ -457,6 +467,16 @@ const AppContent = () => {
           <Route path="/earnings" element={<ProtectedRoute><ResearcherEarningsPage /></ProtectedRoute>} />
           <Route path="/admin/revenue" element={<ProtectedRoute><AdminRevenuePage /></ProtectedRoute>} />
           <Route path="/admin/department-sales" element={<ProtectedRoute><AdminDepartmentSalesPage /></ProtectedRoute>} />
+
+          {/* ====== INTEGRATIONS (Bundle H) ====== */}
+          <Route path="/integrations" element={<ProtectedRoute><IntegrationsHubPage /></ProtectedRoute>} />
+          <Route path="/integrations/activity" element={<ProtectedRoute><IntegrationActivityLogPage /></ProtectedRoute>} />
+          <Route path="/integrations/calendar" element={<ProtectedRoute><CalendarSyncPage /></ProtectedRoute>} />
+          <Route path="/integrations/import" element={<ProtectedRoute><BulkImportWizardPage /></ProtectedRoute>} />
+          <Route path="/settings/connected-accounts" element={<ProtectedRoute><ConnectedAccountsPage /></ProtectedRoute>} />
+          <Route path="/exports" element={<ProtectedRoute><ExportCenterPage /></ProtectedRoute>} />
+          <Route path="/developer/webhooks" element={<ProtectedRoute><WebhookDashboardPage /></ProtectedRoute>} />
+          <Route path="/admin/email-templates" element={<ProtectedRoute><AdminEmailTemplatesPage /></ProtectedRoute>} />
 
           {/* ====== ONBOARDING ====== */}
           <Route path="/onboarding" element={<OnboardingPage />} />
