@@ -42,6 +42,7 @@ const IntegrationActivityLogPage = lazy(() => import("./pages/integrations/Integ
 const BulkImportWizardPage = lazy(() => import("./pages/integrations/BulkImportWizardPage"));
 const CalendarSyncPage = lazy(() => import("./pages/integrations/CalendarSyncPage"));
 const ApiDocsPage = lazy(() => import("./pages/integrations/ApiDocsPage"));
+const AutomationRecipesPage = lazy(() => import("./pages/integrations/AutomationRecipesPage"));
 const DeveloperApiDashboardPage = lazy(() => import("./pages/DeveloperApiDashboardPage"));
 const AdminEmailTemplatesPage = lazy(() => import("./pages/admin/AdminEmailTemplatesPage"));
 const OnboardingPage = lazy(() => import("./pages/OnboardingPage"));
@@ -475,6 +476,7 @@ const AppContent = () => {
           <Route path="/integrations/activity" element={<ProtectedRoute><IntegrationActivityLogPage /></ProtectedRoute>} />
           <Route path="/integrations/calendar" element={<ProtectedRoute><CalendarSyncPage /></ProtectedRoute>} />
           <Route path="/integrations/import" element={<ProtectedRoute><BulkImportWizardPage /></ProtectedRoute>} />
+          <Route path="/integrations/recipes" element={<ProtectedRoute><AutomationRecipesPage /></ProtectedRoute>} />
           <Route path="/settings/connected-accounts" element={<ProtectedRoute><ConnectedAccountsPage /></ProtectedRoute>} />
           <Route path="/exports" element={<ProtectedRoute><ExportCenterPage /></ProtectedRoute>} />
           <Route path="/developer/webhooks" element={<ProtectedRoute><WebhookDashboardPage /></ProtectedRoute>} />
