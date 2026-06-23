@@ -41,6 +41,8 @@ const WebhookDashboardPage = lazy(() => import("./pages/integrations/WebhookDash
 const IntegrationActivityLogPage = lazy(() => import("./pages/integrations/IntegrationActivityLogPage"));
 const BulkImportWizardPage = lazy(() => import("./pages/integrations/BulkImportWizardPage"));
 const CalendarSyncPage = lazy(() => import("./pages/integrations/CalendarSyncPage"));
+const ApiDocsPage = lazy(() => import("./pages/integrations/ApiDocsPage"));
+const DeveloperApiDashboardPage = lazy(() => import("./pages/DeveloperApiDashboardPage"));
 const AdminEmailTemplatesPage = lazy(() => import("./pages/admin/AdminEmailTemplatesPage"));
 const OnboardingPage = lazy(() => import("./pages/OnboardingPage"));
 
@@ -476,6 +478,8 @@ const AppContent = () => {
           <Route path="/settings/connected-accounts" element={<ProtectedRoute><ConnectedAccountsPage /></ProtectedRoute>} />
           <Route path="/exports" element={<ProtectedRoute><ExportCenterPage /></ProtectedRoute>} />
           <Route path="/developer/webhooks" element={<ProtectedRoute><WebhookDashboardPage /></ProtectedRoute>} />
+          <Route path="/developer/api" element={<ProtectedRoute><DeveloperApiDashboardPage /></ProtectedRoute>} />
+          <Route path="/developer/docs" element={<ProtectedRoute><ApiDocsPage /></ProtectedRoute>} />
           <Route path="/admin/email-templates" element={<ProtectedRoute><AdminEmailTemplatesPage /></ProtectedRoute>} />
 
           {/* ====== ONBOARDING ====== */}
