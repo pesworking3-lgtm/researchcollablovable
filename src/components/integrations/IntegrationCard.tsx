@@ -51,7 +51,7 @@ export function IntegrationCard({
           {connected ? (
             <Button size="sm" variant="outline" onClick={onManage}>Manage</Button>
           ) : locked ? (
-            <Button size="sm" onClick={() => upgrade.open({ reason: `${name} requires a premium plan` })}>Upgrade to connect</Button>
+            <Button size="sm" onClick={() => upgrade.prompt({ feature: name, reason: `${name} requires a premium plan`, recommendedPlan: "researcher_pro" })}>Upgrade to connect</Button>
           ) : (
             <Button size="sm" onClick={onConnect}>Connect</Button>
           )}
